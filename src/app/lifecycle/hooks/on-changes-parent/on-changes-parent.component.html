@@ -1,0 +1,17 @@
+<h2>{{title}}</h2>
+<div>
+  <p>
+    <label for="power-input">Power:</label>
+    <input type="text" id="power-input"  [(ngModel)]="power">
+  </p>
+  <p>
+    <label for="hero-name">Hero.name</label>
+    <input type="text" id="hero-name" [(ngModel)]="hero.name">
+  </p>
+  <button type="button"  (click)="reset()">Reset Log</button>
+</div>
+<app-on-changes
+      [hero]="hero"
+      [power]="power">
+
+</app-on-changes>
