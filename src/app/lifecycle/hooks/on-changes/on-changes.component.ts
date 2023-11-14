@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 import { Hero } from 'src/app/hero';
 
 @Component({
@@ -24,6 +24,13 @@ export class OnChangesComponent implements OnChanges {
       const prev = JSON.stringify(change.previousValue);
       this.changeLog.push(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
     }
+  }
+
+  ifChanged(prop: SimpleChange,
+            caallback: (value: any) => void) : void {
+      if(prop !== undefined && prop.currentValue !== undefined) {
+        caallback(prop.currentValue);
+      }
   }
 
   reset() {

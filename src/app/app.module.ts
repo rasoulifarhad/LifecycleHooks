@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OnChangesComponent } from './lifecycle/hooks/on-changes/on-changes.component';
 import { OnChangesParentComponent } from './lifecycle/hooks/on-changes-parent/on-changes-parent.component';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [

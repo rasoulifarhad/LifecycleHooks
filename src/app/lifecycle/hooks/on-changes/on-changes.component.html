@@ -2,7 +2,7 @@
   <p>{{hero.name}} can {{power}}</p>
 
   <h3>Change Log</h3>
-  <div *ngFor="let change on changeLog" class="log">
+  <div *ngFor="let change of changeLog" class="log">
     {{change}}
   </div>
 </div>
